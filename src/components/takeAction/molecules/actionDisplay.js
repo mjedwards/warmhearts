@@ -6,7 +6,7 @@ import MiniGrid from "../atoms/miniGrid";
 
 export default function ActionDisplay() {
   return (
-    <div className="pt-80">
+    <div>
       <Hero />
       <TextContainer />
       <Layout />
