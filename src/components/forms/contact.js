@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-items-center py-20">
       <h2 className="font-bold text-white py-5 text-3xl">Contact Us!</h2>
-      <form className="w-full max-w-lg" name="contact" method="POST" data-netlify="true">
+      <form className="w-full max-w-lg" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
@@ -71,6 +71,7 @@ export default function Contact() {
             ></textarea>
           </div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <button
           class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
           type="submit"

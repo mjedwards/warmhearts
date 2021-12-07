@@ -6,7 +6,7 @@ export default function MentorForm() {
       <h2 className="font-bold text-white py-5 text-3xl uppercase">
         Become A Mentor
       </h2>
-      <form className="w-full max-w-lg" name="contact" method="POST" data-netlify="true">
+      <form className="w-full max-w-lg" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
@@ -74,6 +74,7 @@ export default function MentorForm() {
             ></textarea>
           </div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
       </form>
     </div>
   );
