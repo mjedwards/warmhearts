@@ -1,4 +1,7 @@
 import React from "react";
+import contact from "../../../ui/resources/contact.pdf"
+import tips from "../../../ui/resources/tips.pdf"
+import roles from "../../../ui/resources/roles.pdf"
 
 export default function ResourceLayout() {
   return (
@@ -11,23 +14,18 @@ export default function ResourceLayout() {
         />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">
-            Mentoring Matters: Three Essential Elements Of Success
+            Mentoring Matters: Well Defined Outline Of A Mentor
           </div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            Mentors have to traverse through complex situations at times. That is why it is good to know what a mentor should focus and what a mentor should be.
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
+            <a href={roles} target='_blank' rel='noopener noreferrer'>Open</a>
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
+            <a href={roles} download>Download</a>
           </span>
         </div>
       </div>
@@ -43,107 +41,15 @@ export default function ResourceLayout() {
             What Makes A Good Mentor?
           </div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            Here are a few tips to help improve your mentoring. It can be difficult but this document provides help information.
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
+            <a href={tips} target='_blank' rel='noopener noreferrer'>Open</a>
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
-          </span>
-        </div>
-      </div>
-
-      <div className="rounded overflow-hidden shadow-lg">
-        <img
-          className="w-full"
-          src="https://zakslayback.com/wp-content/uploads/2017/08/490858-636130640007207441-16x9.jpg"
-          alt="Mountain"
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">
-            Great Mentors Focus on the Whole Person, Not Just Their Career
-          </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
-          </span>
-        </div>
-      </div>
-
-      <div className="rounded overflow-hidden shadow-lg">
-        <img
-          className="w-full"
-          src="https://www.affinity.co/hubfs/Affinity_March2018%20V2/images/mentor.jpg"
-          alt="Mountain"
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">
-            What Efficient Mentorship Looks Like
-          </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
-          </span>
-        </div>
-      </div>
-
-      <div className="rounded overflow-hidden shadow-lg">
-        <img
-          className="w-full"
-          src="https://www.prevuemeetings.com/wp-content/uploads/2016/09/Mentors.jpg"
-          alt="Mountain"
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">
-            A coping guide to being a good mentor
-          </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
+            <a href={tips} download>Download</a>
           </span>
         </div>
       </div>
@@ -156,23 +62,18 @@ export default function ResourceLayout() {
         />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">
-            7 Steps to a Great Mentorship
+            Contact Form Mentors and Mentees
           </div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            links to download or open are below
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #skills
+            <a href={contact} target='_blank' rel='noopener noreferrer'>Open</a>
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #mentoring
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #2021
+            <a href={contact} download>Download</a>
           </span>
         </div>
       </div>

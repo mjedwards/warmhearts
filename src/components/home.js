@@ -2,13 +2,15 @@ import React from "react";
 import Hero from "./hero/hero";
 import Main from "./homeMainContent/main";
 import Contact from "./forms/contact";
+import ImageGallery from "./imageGallery/imageGallery";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <Contact />
+      <ImageGallery />
       <Main />
+      <Contact />
     </div>
   );
 }

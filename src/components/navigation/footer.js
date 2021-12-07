@@ -33,14 +33,14 @@ export default function Footer() {
                     Who We Are
                   </NavLink>
                 </li>
-                <li className="md:mr-6 cursor-pointer pt-4 lg:py-0">
+                {/* <li className="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <NavLink
                     to="/What-We-Do"
                     className="focus:outline-none focus:underline hover:text-gray-500"
                   >
                     What We Do
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="md:mr-6 cursor-pointer pt-4 lg:py-0">
                   <NavLink
                     to="/Take-Action"
