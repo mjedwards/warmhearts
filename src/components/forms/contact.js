@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col items-center justify-items-center py-20">
       <h2 className="font-bold text-white py-5 text-3xl">Contact Us!</h2>
-      <form className="w-full max-w-lg">
+      <form className="w-full max-w-lg" netlify>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
@@ -14,14 +14,14 @@ export default function Contact() {
               First Name
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               id="grid-first-name"
               type="text"
               placeholder="Jane"
             />
-            <p className="text-red-500 text-xs italic">
+            {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
-            </p>
+            </p> */}
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
