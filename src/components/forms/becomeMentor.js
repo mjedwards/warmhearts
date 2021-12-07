@@ -6,11 +6,9 @@ export default function MentorForm() {
       <h2 className="font-bold text-white py-5 text-3xl uppercase">
         Become A Mentor
       </h2>
-      <form className="w-full max-w-lg" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form className="w-full max-w-lg" name="contact" method="POST">
         <div className="flex flex-wrap -mx-3 mb-6">
-          <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-          </p>
+          <input type="hidden" name="form-name" value="contact" />
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-white-700 text-xs font-bold mb-2 text-white"
@@ -23,6 +21,8 @@ export default function MentorForm() {
               id="grid-first-name"
               type="text"
               placeholder="Jane"
+              required
+              name="First Name"
             />
             {/* <p className="text-red-500 text-xs italic">
               Please fill out this field.
@@ -40,6 +40,8 @@ export default function MentorForm() {
               id="grid-last-name"
               type="text"
               placeholder="Doe"
+              required
+              name="Last Name"
             />
           </div>
         </div>
@@ -57,6 +59,8 @@ export default function MentorForm() {
               id="grid-email"
               type="email"
               placeholder="********@email.com"
+              required
+              name="Email"
             />
           </div>
         </div>
@@ -67,13 +71,15 @@ export default function MentorForm() {
               className="block uppercase tracking-wide text-white-700 text-xs font-bold mb-2 text-white"
               htmlFor="grid-description"
             >
-              Brief Description
+              Message
             </label>
             <textarea
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-description"
               type="text"
               placeholder="Share a bit about yourself"
+              required
+              name="Message"
             ></textarea>
           </div>
         </div>
