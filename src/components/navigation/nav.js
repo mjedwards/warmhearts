@@ -22,7 +22,7 @@ function Nav() {
                     to="/"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium italic"
                   >
-                    Warmhearts Mentorship
+                    Warmheart Mentorship
                   </NavLink>
                   <NavLink
                     to="/Who-We-Are"
@@ -31,12 +31,12 @@ function Nav() {
                     Who We Are
                   </NavLink>
 
-                  {/* <NavLink
+                  <NavLink
                     to="/What-We-Do"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     What We Do
-                  </NavLink> */}
+                  </NavLink>
 
                   <NavLink
                     to="/Take-Action"
