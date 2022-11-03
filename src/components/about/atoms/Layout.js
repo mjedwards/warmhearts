@@ -130,8 +130,11 @@ export default function Layout() {
       <div className="flex flex-col w-full lg:w-1/2 overflow-hidden bg-transparent text-white lg:h-96">
         <div className="p-8">
           <h2 className="font-bold uppercase">Mission</h2>
-          <p className="leading-loose text-sm lg:text-lg lg:px-40 lg:p-8">
+          {/* <p className="leading-loose text-sm lg:text-lg lg:px-40 lg:p-8">
             Empower the youth to become well rounded, productive citizens by providing mentorship services to improve academic achievement, character building, self-esteem, social and emotional stability, and avoidance of problems and high risk behaviors. We believe building relationships between caring adults and the youth will foster this goal.
+          </p> */}
+          <p className="leading-loose text-sm lg:text-lg lg:px-40 lg:p-8">
+          Our mission is, through mentorship, to empower youth from social and economically disadvantaged communities to become academically fit people of high character and strong self-esteem who are emotionally stable and free of high-risk behaviors.
           </p>
         </div>
       </div>
