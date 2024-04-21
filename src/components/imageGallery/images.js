@@ -40,6 +40,19 @@ const Images = [
   require("../../ui/assets/photos/breakfast/b39.jpg").default,
   require("../../ui/assets/photos/breakfast/b39.jpg").default,
   require("../../ui/assets/photos/breakfast/b40.jpg").default,
+  require("../../ui/assets/photos/misc/misc1.jpg").default,
+  require("../../ui/assets/photos/misc/misc2.jpg").default,
+  require("../../ui/assets/photos/misc/misc3.jpg").default,
+  require("../../ui/assets/photos/misc/misc4.jpg").default,
+  require("../../ui/assets/photos/misc/misc5.jpg").default,
+  require("../../ui/assets/photos/misc/misc6.jpg").default,
+  require("../../ui/assets/photos/misc/misc7.jpg").default,
+  require("../../ui/assets/photos/misc/misc8.jpg").default,
+  require("../../ui/assets/photos/misc/misc9.jpg").default,
+  require("../../ui/assets/photos/misc/misc10.jpg").default,
+  require("../../ui/assets/photos/misc/misc11.jpg").default,
+  require("../../ui/assets/photos/misc/misc12.png").default,
+  require("../../ui/assets/photos/misc/misc13.png").default,
 ];
 
 export default Images;

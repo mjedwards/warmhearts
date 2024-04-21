@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import noBG from "../../ui/assets/logos/noBG.png";
 
 export default function Footer() {
+  const date = new Date()
+  const year = date.getFullYear()
   return (
     <div>
       <div className="bg-linear-pink-invert py-12 px-4">
@@ -61,7 +63,7 @@ export default function Footer() {
             </div>
             <div className="text-sm text-color mb-10 f-f-l">
               <p tabIndex="0" className="focus:outline-none">
-                © 2021 Warmhearts Mentorship. All rights reserved
+                {`© ${year} Warmhearts Mentorship. All rights reserved`}
               </p>
             </div>
           </div>
