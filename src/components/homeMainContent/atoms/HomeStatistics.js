@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 export default function HomeStatistics() {
 	return (
 		<>
-			<div className='flex flex-col lg:flex-row col-span-5 h-full mt-11'>
+			<div className='flex flex-col lg:flex-row col-span-5 h-full mt-11 py-14'>
 				<div className='lg:p-12 text-gray bg-white flex flex-col lg:m-auto text-left gap-4 w-1/2'>
 					<h3
 						className='font-bold text-3xl border-b-4'

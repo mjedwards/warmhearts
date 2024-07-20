@@ -30,13 +30,7 @@ function MobileNav({ isOpen }) {
 						<NavLink
 							to='/Take-Action'
 							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
-							Take Action
-						</NavLink>
-
-						<NavLink
-							to='/Resources'
-							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
-							Resources
+							Contact
 						</NavLink>
 
 						<NavLink

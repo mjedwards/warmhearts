@@ -10,18 +10,18 @@ function Nav() {
 			<nav className='bg-transparent'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
-						<div className='flex items-center'>
+						<div className='flex items-center w-full'>
 							<div className='flex-shrink-0'>
 								<NavLink to='/'>
 									<img className='h-16 w-16' src={noBG} alt='Workflow' />
 								</NavLink>
 							</div>
-							<div className='hidden md:block'>
+							<div className='hidden md:flex w-full justify-center'>
 								<div className='ml-10 flex items-baseline space-x-4'>
 									<NavLink
 										to='/'
-										className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium italic'>
-										Warmheart Mentorship
+										className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'>
+										Home
 									</NavLink>
 									<NavLink
 										to='/Who-We-Are'
@@ -39,12 +39,6 @@ function Nav() {
 										to='/Take-Action'
 										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
 										Take Action
-									</NavLink>
-
-									<NavLink
-										to='/Resources'
-										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-										Resources
 									</NavLink>
 								</div>
 							</div>

@@ -7,7 +7,7 @@ export default function Footer() {
   const year = date.getFullYear()
   return (
     <div>
-      <div className="bg-linear-pink-invert py-12 px-4">
+      <div className="bg-linear-pink-invert py-12 px-4 bg-gray-800">
         <div
           tabIndex="0"
           aria-label="footer"
