@@ -43,8 +43,8 @@ export default function Layout() {
 					</div>
 				</div>
 				<img
-          className="rotate--10 absolute"
-          style={{width: "250px", left: "25%"}}
+					className='rotate--10 absolute hidden xl:flex'
+					style={{ width: "250px", left: "25%" }}
 					src='https://static.wixstatic.com/media/af33bb_451b4998f81d49beb47a95360518c415~mv2.gif'
 					alt='instructions to follow'
 				/>

@@ -9,7 +9,7 @@ export default function VideoHero() {
 			<section
 				className='relative h-screen flex flex-row items-end justify-center text-center text-white py-0 px-3'
 				style={{ backgroundImage: `url(${whmsBG})`, backgroundSize: "cover" }}>
-				<div className='m-auto mr-0 mt-96 relative z-10 flex flex-col justify-between text-left w-1/2 gap-8'>
+				<div className='my-auto md:m-auto md:mr-0 md:mt-96 relative flex flex-col justify-between text-left md:w-1/2 gap-8' style={{zIndex: 1}}>
 					<div className='w-3/4'>
 						<p className='text-4xl'>
 							<span className='font-bold' style={{ color: "#EC523D" }}>Inspiring</span> hope and
@@ -27,7 +27,7 @@ export default function VideoHero() {
 						</div>
 					</NavLink>
 				</div>
-				<div className='relative z-10 w-2/5'>
+				<div className='md:block hidden relative w-2/5' style={{zIndex: 1}}>
 					<img src={heroImg} alt='a collection of photos taken during events' />
 				</div>
 			</section>

@@ -7,7 +7,7 @@ function Founder() {
 			className='flex lg:flex-row flex-col p-14 justify-evenly items-center'
 			style={{ backgroundColor: "#EC523D" }}>
 			<img src={founder} alt='' className='w-1/3' />
-			<div className='flex flex-col text-white w-1/2'>
+			<div className='flex flex-col text-white md:w-1/2'>
 				<h2 className='text-5xl font-bold'>Hear from the founder</h2>
 				<div class='flex w-full items-center rounded-full'>
 					<div
@@ -19,7 +19,7 @@ function Founder() {
 						}}></div>
 					<span class='text-black text-lg font-semibold leading-8 px-8 py-3'>
 						<svg
-							class='w-4 h-4 text-gray-700 dark:text-gray-800'
+							className='w-4 h-4 text-gray-700 dark:text-gray-800'
 							aria-hidden='true'
 							xmlns='http://www.w3.org/2000/svg'
 							fill='currentColor'
@@ -28,7 +28,7 @@ function Founder() {
 						</svg>
 					</span>
 					<div
-						class='flex-1 border-b'
+						className='flex-1 border-b'
 						style={{
 							borderColor: "#F1D195",
 							borderWidth: "3px",

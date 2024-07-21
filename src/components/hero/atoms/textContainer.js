@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function TextContainer({title, subtitle, description, tagline, pathname, bg, textColor, font}) {
 	return (
-		<div className='lg:py-12 text-gray flex flex-col lg:m-auto text-left gap-4 w-1/2' style={{backgroundColor: `${bg ? bg : ""}`}}>
+		<div className='lg:py-12 text-gray flex flex-col lg:m-auto text-left gap-4 lg:w-1/2 mb-2 p-2' style={{backgroundColor: `${bg ? bg : ""}`}}>
 			<h2 style={{ color: "#EC523D" }}>{title}</h2>
 			<h3 className='font-bold text-3xl' style={{color: `${textColor}`}}>{subtitle}</h3>
 			<div style={{color: `${textColor ? textColor: ""}`}}>

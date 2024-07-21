@@ -94,11 +94,11 @@ function StudentResponse() {
 						borderRadius: "5px 0px 0px 5px",
 					}}></div>
 			</div>
-			<div className='flex flex-row w-3/4 m-auto'>
-				<div className='flex flex-col w-3/4 m-auto'>
+			<div className='flex flex-col md:flex-row w-3/4 m-auto'>
+				<div className='flex flex-col md:w-3/4 m-auto'>
 					<StackedBarChart data={data} />
 				</div>
-				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-6 w-1/2'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-6 md:w-1/2 w-full'>
 					<div className='bg-white overflow-hidden sm:rounded-lg p-6'>
 						<p className='mt-2 leading-6 text-gray-600 text-xs text-left'>
 							The program has had a significant and measurable impact on the

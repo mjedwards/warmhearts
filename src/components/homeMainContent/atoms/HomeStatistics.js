@@ -7,7 +7,7 @@ export default function HomeStatistics() {
 	return (
 		<>
 			<div className='flex flex-col lg:flex-row col-span-5 h-full mt-11 py-14'>
-				<div className='lg:p-12 text-gray bg-white flex flex-col lg:m-auto text-left gap-4 w-1/2'>
+				<div className='lg:p-12 text-gray bg-white flex flex-col lg:m-auto text-left gap-4 lg:w-1/2 p-2'>
 					<h3
 						className='font-bold text-3xl border-b-4'
 						style={{ borderColor: "#EC523D", width: "fit-content" }}>
@@ -39,14 +39,14 @@ export default function HomeStatistics() {
 					</div>
 					<NavLink to='/'>
 						<div
-							className='rounded-3xl w-1/4 cursor-pointer text-white text-lg'
+							className='rounded-3xl w-1/4 cursor-pointer text-white text-lg lg:mb-0 mb-4'
 							style={{ color: "#EC523D" }}>
 							Learn More
 						</div>
 					</NavLink>
 				</div>
 				<div
-					className='stats w-1/2 flex-grow m-auto flex flex-col justify-around rounded-l-3xl'
+					className='stats w-screen lg:w-1/2 flex-grow m-auto flex flex-col justify-around rounded-l-3xl'
 					style={{ backgroundImage: `url(${sectionImage})`, backgroundSize: 'cover', height: '600px'}}>
 					<div>
 						<div className='flex flex-row justify-center items-center'>

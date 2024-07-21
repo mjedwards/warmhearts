@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Hero({title, description, subtitle, bg}) {
+export default function Hero({ title, description, subtitle, bg }) {
 	return (
 		<>
 			<section
@@ -9,12 +9,12 @@ export default function Hero({title, description, subtitle, bg}) {
 					backgroundImage: `url(${bg})`,
 					backgroundSize: "cover",
 				}}>
-				<div className='mt-50 relative z-10 flex flex-col justify-between text-center w-1/2 gap-8'>
+				<div
+					className='mt-50 relative flex flex-col justify-between text-center md:w-1/2 gap-8'
+					style={{ zIndex: 1 }}>
 					<div className='m-auto w-3/4'>
 						<h1 className='text-white font-bold text-5xl mb-5'>{title}</h1>
-						<p className='text-base '>
-							{description}
-						</p>
+						<p className='text-base '>{description}</p>
 					</div>
 					<div className=''>
 						<p className='text-sm'>{subtitle}</p>

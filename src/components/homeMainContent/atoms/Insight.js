@@ -14,12 +14,12 @@ const attendanceData = [
 function Insight() {
 	return (
 		<div style={{ backgroundColor: "#F9FAFB" }} className='px-10 py-14'>
-			<div className='flex flex-col lg:flex-row text-left justify-around mb-10'>
+			<div className='flex flex-col lg:flex-row text-center lg:text-left md:justify-around mb-10'>
 				<h3 className='title font-bold text-3xl text-gray-800'>
 					Showing Up and <br />
 					Standing Out
 				</h3>
-				<div className='text-left w-1/2'>
+				<div className='md:text-left w-full lg:w-1/2'>
 					<p className='description text-xs'>
 						Education is a cornerstone of our program. We are committed to
 						supporting our children as they strive to advance to the next grade.
@@ -38,7 +38,7 @@ function Insight() {
 				</div>
 			</div>
 			<div className='flex flex-col lg:flex-row gap-8'>
-				<div className='flex flex-col w-1/3 gap-6'>
+				<div className='flex flex-col w-full lg:w-1/3 gap-6'>
 					<div className='chart flex justify-center'>
 						<DonutChart
 							data={attendanceData}
@@ -61,7 +61,7 @@ function Insight() {
 						thrive academically and personally.
 					</p>
 				</div>
-				<div className='flex flex-col w-1/3 gap-6'>
+				<div className='flex flex-col w-full lg:w-1/3 gap-6'>
 					<div className='chart flex justify-center'>
 						<DonutChart
 							data={behavioralData}
@@ -85,7 +85,7 @@ function Insight() {
 						their full potential academically and socially.
 					</p>
 				</div>
-				<div className='flex flex-col w-1/3 justify-evenly'>
+				<div className='flex flex-col w-full lg:w-1/3 justify-evenly'>
 					<div className='grade-info'>
 						<p className='average font-bold text-left text-3xl'>3.25 GPA</p>
 						<p className='subtitle text-left text-gray-800'>Average GPA</p>

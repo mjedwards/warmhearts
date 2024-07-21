@@ -1,12 +1,11 @@
 import React from "react";
 import ImageContainer from "../../hero/atoms/imageContainer";
-import { style } from "d3";
 
 function MentorComponent({ info }) {
 	const { title, description, roles, note, image, direction } = info;
 	return (
 		<div className={`flex flex-col lg:${direction} col-span-5 h-full mt-11`}>
-			<div className='lg:py-12 text-gray flex flex-col lg:m-auto text-left gap-4 w-1/2'>
+			<div className='lg:py-12 text-gray flex flex-col lg:m-auto text-left gap-4 md:w-1/2 p-2'>
 				<h2 className='font-bold text-xl' style={{ color: "#EC523D" }}>
 					{title}
 				</h2>

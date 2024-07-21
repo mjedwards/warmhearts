@@ -89,6 +89,7 @@ const DonutChart = ({ data, width, pastName, currentName }) => {
       tooltip.remove();
       svg.selectAll("*").remove();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, width]);
 
   return <svg ref={chartRef} />;

@@ -47,6 +47,7 @@ const StackedBarChart = ({ data }) => {
         .join("g")
         .attr("fill", d => color(d.key))
         .selectAll("rect")
+        // eslint-disable-next-line no-sequences
         .data(D => D.map(d => (d.key = D.key, d)))
         .join("rect")
         .attr("x", d => x(d[0]))
@@ -54,7 +55,7 @@ const StackedBarChart = ({ data }) => {
         .attr("height", y.bandwidth())
         .attr("width", d => x(d[1]) - x(d[0]))
         .attr("height", y.bandwidth() * 0.8)
-        .on("mouseover", (event, d) => {
+        .on("mouseover", (_event, d) => {
           tooltip.style("visibility", "visible")
             .html(`${d.data[0]}? <br>${formatValue(d.data[1].get(d.key).percentage)}% ${d.key}`);
         })
@@ -102,6 +103,7 @@ const StackedBarChart = ({ data }) => {
         .attr("y", y)
         .attr("dy", dy + "em");
 
+      // eslint-disable-next-line no-cond-assign
       while (word = words.pop()) {
         line.push(word);
         tspan.text(line.join(" "));

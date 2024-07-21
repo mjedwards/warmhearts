@@ -1,6 +1,4 @@
 import React from "react";
-import boy from "../../../ui/assets/photos/boy.png";
-import girl from "../../../ui/assets/photos/girl.jpg";
 import diversity from "../../../ui/assets/photos/breakfast/b14.JPG";
 
 const values = [
@@ -39,7 +37,7 @@ function Values() {
 	return (
 		<div className='flex flex-wrap' style={{ backgroundColor: "#F9FAFB" }}>
 			<div className='mx-auto mt-5 mb-32 max-w-7xl px-6 sm:mt-10 lg:px-8'>
-				<div className='flex flex-row items-center'>
+				<div className='flex flex-col md:flex-row items-center'>
 					<div className='mx-auto max-w-2xl lg:mx-0'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl text-left'>
 							Our values
