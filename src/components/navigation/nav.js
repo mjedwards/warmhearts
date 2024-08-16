@@ -6,7 +6,7 @@ import noBG from "../../ui/assets/logos/noBG.png";
 function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div className='absolute inset-0 z-10'>
+		<div className='absolute inset-0 z-10' style={{ height: "fit-content" }}>
 			<nav className='md:bg-transparent bg-gray-800'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
