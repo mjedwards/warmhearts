@@ -1,10 +1,9 @@
 import React from "react";
-import mentee from "../../../ui/assets/photos/mentee@2x.png";
 
-export default function ImageContainer() {
-  return (
-    <div className="w-full h-full">
-      <img src={mentee} alt="smiling child" className="w-screen h-full" />
-    </div>
-  );
+export default function ImageContainer({ image, alt_text }) {
+	return (
+		<div className='md:w-5/6 lg:w-2/6 md:h-1/2 m-auto'>
+			<img src={image} alt={alt_text} className='md:w-screen h-full' />
+		</div>
+	);
 }

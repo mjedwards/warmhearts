@@ -1,10 +1,16 @@
 import React from "react";
-import Layout from "./atoms/layout";
+import HomeStatistics from "./atoms/HomeStatistics";
+import Insight from "./atoms/Insight";
+import CTAwithAsset from "./atoms/CTAwithAsset";
+import ContactSection from "./atoms/ContactSection";
 
 export default function Main() {
   return (
     <div>
-      <Layout />
+      <HomeStatistics />
+      <Insight/>
+      <CTAwithAsset />
+      <ContactSection />
     </div>
   );
 }

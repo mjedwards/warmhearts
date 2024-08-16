@@ -1,3 +1,7 @@
+body {
+  font-family: freight-sans-pro,sans-serif !important;
+}
+
 .App {
   text-align: center;
 }
@@ -44,4 +48,8 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+#root > div > div > div > div > div.w-2\/6.h-1\/2.m-auto > img {
+    border-radius: 24px;
 }

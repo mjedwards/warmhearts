@@ -1,11 +1,26 @@
 import React from "react";
 
-export default function Hero() {
-  return (
-    <div className="bg-gray-50">
-      <h1 className="text-blue-900 pt-20 pb-20 text-5xl lg:py-28 lg:text-6xl font-bold">
-        Our Vision and Mission 
-      </h1>
-    </div>
-  );
+export default function Hero({ title, description, subtitle, bg }) {
+	return (
+		<>
+			<section
+				className='relative h-screen flex flex-row items-center justify-center text-center text-white py-0 px-3'
+				style={{
+					backgroundImage: `url(${bg})`,
+					backgroundSize: "cover",
+				}}>
+				<div
+					className='mt-50 relative flex flex-col justify-between text-center md:w-1/2 gap-8'
+					style={{ zIndex: 1 }}>
+					<div className='m-auto w-3/4'>
+						<h1 className='text-white font-bold text-5xl mb-5'>{title}</h1>
+						<p className='text-base '>{description}</p>
+					</div>
+					<div className=''>
+						<p className='text-sm'>{subtitle}</p>
+					</div>
+				</div>
+			</section>
+		</>
+	);
 }
