@@ -37,7 +37,7 @@ export default function HomeStatistics() {
 							shopping.
 						</p>
 					</div>
-					<NavLink to='/'>
+					<NavLink to='/Who-We-Are'>
 						<div
 							className='rounded-3xl w-1/4 cursor-pointer text-white text-lg lg:mb-0 mb-4'
 							style={{ color: "#EC523D" }}>
