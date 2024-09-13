@@ -2,7 +2,8 @@ import { Link } from "@material-ui/core";
 import React from "react";
 
 export default function Sponsors() {
-	const url = "https://storage.cloud.google.com/whms_images/images/sponsors/";
+	
+	const url = "https://storage.googleapis.com/whms_images/images/sponsors/";
 	const sponsors = [
 		"cpr.webp",
 		"dales.png",

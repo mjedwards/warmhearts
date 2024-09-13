@@ -29,7 +29,7 @@ export default function ResourceLayout() {
 				<div className='rounded overflow-hidden shadow-lg'>
 					<img
 						className='w-full'
-						src='https://storage.cloud.google.com/whms_images/images/assets/mentoring_matters.jpeg'
+						src='https://storage.googleapis.com/whms_images/images/assets/mentoring_matters.jpeg'
 						alt='Mountain'
 					/>
 					<div className='px-6 py-4'>

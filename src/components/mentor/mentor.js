@@ -35,7 +35,7 @@ const mentorContent = [
 		],
 		note: "A mentor’s role is to provide support, guidance, and encouragement, helping mentees navigate their personal and professional journeys.",
 		image:
-			"https://storage.cloud.google.com/whms_images/images/assets/guidance.jpeg",
+			"https://storage.googleapis.com/whms_images/images/assets/guidance.jpeg",
 		
 		direction: "flex-row"
 	},
@@ -64,7 +64,7 @@ const mentorContent = [
 		],
 		note: "A good mentor shows patience, empathy, and persistence, creating a supportive environment for mentee growth.",
 		image:
-			"https://storage.cloud.google.com/whms_images/images/assets/mentoring.jpeg",
+			"https://storage.googleapis.com/whms_images/images/assets/mentoring.jpeg",
 		direction: "flex-row-reverse"
 	},
 	{
@@ -90,7 +90,7 @@ const mentorContent = [
 		],
 		note: "Mentors must recognize their limits and understand that they cannot fulfill roles that require professional training. However, they can guide mentees on how to access the necessary professional services and resources to meet their needs.",
 		image:
-			"https://storage.cloud.google.com/whms_images/images/assets/no_mentor.jpeg",
+			"https://storage.googleapis.com/whms_images/images/assets/no_mentor.jpeg",
 		direction: "flex-row"
 	},
 ];

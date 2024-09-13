@@ -4,42 +4,42 @@ const team = [
 	{
 		name: "Veronne McMain",
 		role: "CEO",
-		imageUrl: "https://storage.cloud.google.com/whms_images/images/team/vm.png",
+		imageUrl: "https://storage.googleapis.com/whms_images/images/team/vm.png",
 		location: "Florida, US",
 	},
 	{
 		name: "Marci Bennett",
 		role: "President",
 		imageUrl:
-			"https://storage.cloud.google.com/whms_images/images/team/placeholder.jpeg",
+			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
 		location: "Florida, US",
 	},
 	{
 		name: "Ruth Cater Lynch",
 		role: "Vice President",
 		imageUrl:
-			"https://storage.cloud.google.com/whms_images/images/team/placeholder.jpeg",
+			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
 		location: "Florida, US",
 	},
 	{
 		name: "Dr. Joanette Brookes-George",
 		role: "Director",
 		imageUrl:
-			"https://storage.cloud.google.com/whms_images/images/team/dr_joanette.jpg",
+			"https://storage.googleapis.com/whms_images/images/team/dr_joanette.jpg",
 		location: "Florida, US",
 	},
 	{
 		name: "Felicity Swanson",
 		role: "Secretary",
 		imageUrl:
-			"https://storage.cloud.google.com/whms_images/images/team/felicity.jpg",
+			"https://storage.googleapis.com/whms_images/images/team/felicity.jpg",
 		location: "Florida, US",
 	},
 	{
 		name: "Maya Gee",
 		role: "Public Relations (PR)",
 		imageUrl:
-			"https://storage.cloud.google.com/whms_images/images/team/placeholder.jpeg",
+			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
 		location: "Florida, US",
 	},
 ];
