@@ -21,20 +21,19 @@ export default function HomeStatistics() {
 							for Broward County Public Schools, where her focus on community
 							collaboration thrives.
 						</p>
-                        <br/>
+						<br />
 						<p className='leading-relaxed text-left text-xl'>
-							Her personal struggles, including homelessness and absent
-							fatherhood, fueled her dedication to helping students. This drive
-							led her to establish a mentorship program at Parkway Middle School
-							of the Arts and organize an Annual Thanksgiving Dinner for needy
+							Her personal struggles, including homelessness and emotional
+							issues, fueled her dedication to helping students. This drive led
+							her to establish a mentorship program at Parkway Middle School of
+							the Arts and organize an Annual Thanksgiving Dinner for needy
 							families.
 						</p>
-                        <br/>
+						<br />
 						<p className='leading-relaxed text-left text-xl'>
-							Currently pursuing a Ph.D. in psychology while working as a family
-							therapist, Veronne prioritizes humility and kindness, cherishing
-							time with loved ones and enjoying hobbies like reading and
-							shopping.
+							Veronne prioritizes humility and kindness, cherishing time with
+							loved ones and enjoying hobbies like reading, writing, shopping,
+							and giving back to the community.
 						</p>
 					</div>
 					<NavLink to='/Who-We-Are'>
@@ -47,27 +46,43 @@ export default function HomeStatistics() {
 				</div>
 				<div
 					className='stats w-screen lg:w-1/2 flex-grow m-auto flex flex-col justify-around rounded-l-3xl'
-					style={{ backgroundImage: `url(${sectionImage})`, backgroundSize: 'cover', height: '600px'}}>
+					style={{
+						backgroundImage: `url(${sectionImage})`,
+						backgroundSize: "cover",
+						height: "600px",
+					}}>
 					<div>
 						<div className='flex flex-row justify-center items-center'>
-							<Icon icon='ph:users-three' style={{ color: "white" }} width={60}/>
-							<span className="text-4xl text-white ml-2">120</span>
+							<Icon
+								icon='ph:users-three'
+								style={{ color: "white" }}
+								width={60}
+							/>
+							<span className='text-4xl text-white ml-2'>120</span>
 						</div>
-						<p className="text-white text-base">Students Participating</p>
+						<p className='text-white text-base'>Students Participating</p>
 					</div>
 					<div>
 						<div className='flex flex-row justify-center items-center'>
-							<Icon icon='hugeicons:mentoring' style={{ color: "white" }} width={60}/>
-							<span className="text-4xl text-white ml-2">110</span>
+							<Icon
+								icon='hugeicons:mentoring'
+								style={{ color: "white" }}
+								width={60}
+							/>
+							<span className='text-4xl text-white ml-2'>110</span>
 						</div>
-						<p className="text-white text-base">Mentors Participating</p>
+						<p className='text-white text-base'>Mentors Participating</p>
 					</div>
 					<div>
 						<div className='flex flex-row justify-center items-center'>
-							<Icon icon='charm:graduate-cap' style={{ color: "white" }} width={60}/>
-							<span className="text-4xl text-white ml-2">75%</span>
+							<Icon
+								icon='charm:graduate-cap'
+								style={{ color: "white" }}
+								width={60}
+							/>
+							<span className='text-4xl text-white ml-2'>75%</span>
 						</div>
-						<p className="text-white text-base">Academic Improvement</p>
+						<p className='text-white text-base'>Academic Improvement</p>
 					</div>
 				</div>
 			</div>
