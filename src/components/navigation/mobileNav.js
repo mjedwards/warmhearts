@@ -35,12 +35,12 @@ function MobileNav({ isOpen }) {
 							Contact
 						</NavLink>
 
-						<NavLink
-							to=''
+						<a
+							href='https://www.paypal.com/donate/?hosted_button_id=LVRU65QJUS29E'
 							className='rounded-3xl p-1 text-center cursor-pointer border-2 mt-1 w-1/4'
 							style={{ borderColor: "#EC523D", color: "#EC523D" }}>
 							Donate
-						</NavLink>
+						</a>
 					</div>
 				</div>
 			)}

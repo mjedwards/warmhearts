@@ -4,14 +4,14 @@ const team = [
 	{
 		name: "Veronne McMain",
 		role: "CEO",
-		imageUrl: "https://storage.googleapis.com/whms_images/images/team/vm.png",
+		imageUrl: "https://storage.googleapis.com/whms_images/images/team/vm-removebg-preview.png",
 		location: "Florida, US",
 	},
 	{
 		name: "Marci Bennett",
 		role: "President",
 		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
+			"https://storage.googleapis.com/whms_images/images/team/marci_benett__3_-removebg-preview.png",
 		location: "Florida, US",
 	},
 	{
@@ -25,14 +25,14 @@ const team = [
 		name: "Dr. Joanette Brookes-George",
 		role: "Director",
 		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/dr_joanette.jpg",
+			"https://storage.googleapis.com/whms_images/images/team/dr_joanette-removebg-preview.png",
 		location: "Florida, US",
 	},
 	{
 		name: "Felicity Swanson",
 		role: "Secretary",
 		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/felicity.jpg",
+			"https://storage.googleapis.com/whms_images/images/team/felicity__1_-removebg-preview.png",
 		location: "Florida, US",
 	},
 	{

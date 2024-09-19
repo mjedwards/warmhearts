@@ -43,12 +43,12 @@ function Nav() {
 								</div>
 							</div>
 						</div>
-						<NavLink
-							to=''
+						<a
+							href='https://www.paypal.com/donate/?hosted_button_id=LVRU65QJUS29E'
 							className='hidden md:block rounded-3xl p-1 text-center w-1/4 cursor-pointer border-2 w-1/6'
 							style={{ borderColor: "#EC523D", color: "#EC523D" }}>
 							Donate
-						</NavLink>
+						</a>
 						<div className='-mr-2 flex md:hidden'>
 							<button
 								onClick={() => setIsOpen(!isOpen)}
