@@ -36,6 +36,12 @@ function Nav() {
 									</NavLink>
 
 									<NavLink
+										to='/Events'
+										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+										Upcoming Events
+									</NavLink>
+
+									<NavLink
 										to='/Take-Action'
 										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
 										Take Action

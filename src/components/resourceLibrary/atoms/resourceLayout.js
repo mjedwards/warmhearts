@@ -59,7 +59,7 @@ export default function ResourceLayout() {
 				<div className='rounded overflow-hidden shadow-lg'>
 					<img
 						className='w-full'
-						src='https://d22bbllmj4tvv8.cloudfront.net/d5/c0/efaeb96d41e3a674f8d2ed576bed/what-is-mentoring1-square.jpg'
+						src='https://storage.googleapis.com/whms_images/images/assets/mentorimage.jpg'
 						alt='Mountain'
 					/>
 					<div className='px-6 py-4'>
