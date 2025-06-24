@@ -9,6 +9,7 @@ import MentorPage from "./pages/mentor";
 import ActionPage from "./pages/action";
 import Footer from "./components/navigation/footer";
 import EventsPage from "./pages/events";
+import EventsGalleryPage from "./pages/eventsGallery";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 					<Route path='/What-We-Do' component={MentorPage}></Route>
 					<Route path='/Events' component={EventsPage}></Route>
 					<Route path='/Take-Action' component={ActionPage}></Route>
+					<Route path='/Gallery' component={EventsGalleryPage}></Route>
 					{/* <Route default component={NotFound}></Route> */}
 				</Switch>
 				<Footer />

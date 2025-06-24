@@ -28,11 +28,20 @@ function MobileNav({ isOpen }) {
 							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
 							What We Do
 						</NavLink>
-
+						<NavLink
+							to='/Events'
+							className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+							Upcoming Events
+						</NavLink>
 						<NavLink
 							to='/Take-Action'
 							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
 							Contact
+						</NavLink>
+						<NavLink
+							to='/Gallery'
+							className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+							Events Gallery
 						</NavLink>
 
 						<a

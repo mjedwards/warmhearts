@@ -36,42 +36,50 @@ const EventGallery = () => {
 					{/* Main Content */}
 					<div className='flex-1'>
 						<section className='bg-white text-gray-800 py-10'>
-							{events.length > 0 && <div className='container mx-auto px-6'>
-								{/* Event 1 */}
-								{events.map((event) => (
-									<div className='flex flex-col md:flex-row mb-10 pb-10 border-b'>
-										<div className='md:w-1/6 flex-shrink-0 bg-gray-100 p-6 text-center mb-4 md:mb-0'>
-											<div className='text-4xl font-bold text-teal-800'>
-												{event.day}
+							{events.length > 0 && (
+								<div className='container mx-auto px-6'>
+									{/* Event 1 */}
+									{events.map((event) => (
+										<div
+											key={event.id}
+											className='flex flex-col md:flex-row mb-10 pb-10 border-b'>
+											<div className='md:w-1/6 flex-shrink-0 bg-gray-100 p-6 text-center mb-4 md:mb-0'>
+												<div className='text-4xl font-bold text-teal-800'>
+													{event.day}
+												</div>
+												<div className='text-gray-500 uppercase'>
+													{event.month}
+												</div>
 											</div>
-											<div className='text-gray-500 uppercase'>
-												{event.month}
+											<div className='md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:px-4'>
+												<img
+													src={event.image}
+													alt='Event 1'
+													className='w-full object-cover'
+												/>
+											</div>
+											<div className='md:w-7/12 md:px-4'>
+												<h3 className='text-xl font-semibold text-teal-800 mb-2'>
+													{event.title}
+												</h3>
+												<p className='text-orange-400 uppercase text-sm mb-2'>
+													{event.date}
+												</p>
+												<p className='text-gray-600 mb-6'>
+													{event.description}
+												</p>
+												<a href={event.url}>
+													<button
+														disabled
+														className='border px-4 py-1 rounded-full text-sm transition-colors'>
+														Buy Tickets
+													</button>
+												</a>
 											</div>
 										</div>
-										<div className='md:w-1/4 flex-shrink-0 mb-4 md:mb-0 md:px-4'>
-											<img
-												src={event.image}
-												alt='Event 1'
-												className='w-full object-cover'
-											/>
-										</div>
-										<div className='md:w-7/12 md:px-4'>
-											<h3 className='text-xl font-semibold text-teal-800 mb-2'>
-												{event.title}
-											</h3>
-											<p className='text-orange-400 uppercase text-sm mb-2'>
-												{event.date}
-											</p>
-											<p className='text-gray-600 mb-6'>{event.description}</p>
-											<a href={event.url}>
-												<button disabled className='border px-4 py-1 rounded-full text-sm transition-colors'>
-													Buy Tickets
-												</button>
-											</a>
-										</div>
-									</div>
-								))}
-							</div>}
+									))}
+								</div>
+							)}
 						</section>
 					</div>
 				</div>
@@ -113,11 +121,13 @@ const EventGallery = () => {
 												{event.date}
 											</p>
 											<p className='text-gray-600 mb-6'>{event.description}</p>
-											<a href={event.url}>
-												<button className='border px-4 py-1 rounded-full text-sm transition-colors'>
-													Buy Tickets
+											<div>
+												<button
+													disabled='true'
+													className='border px-4 py-1 rounded-full text-sm transition-colors'>
+													Closed
 												</button>
-											</a>
+											</div>
 										</div>
 									</div>
 								))}
