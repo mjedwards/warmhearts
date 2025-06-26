@@ -22,6 +22,81 @@ const EventsImageGallery = ({
 				{ id: 8, src: Images[8], alt: "sneaker ball event", type: "image" },
 				{ id: 9, src: Images[9], alt: "sneaker ball event", type: "image" },
 				{ id: 10, src: Images[10], alt: "sneaker ball event", type: "image" },
+				{ id: 11, src: Images[11], alt: "sneaker ball event", type: "image" },
+				{ id: 12, src: Images[12], alt: "sneaker ball event", type: "image" },
+				{ id: 13, src: Images[13], alt: "sneaker ball event", type: "image" },
+				{ id: 14, src: Images[14], alt: "sneaker ball event", type: "image" },
+				{ id: 15, src: Images[15], alt: "sneaker ball event", type: "image" },
+				{ id: 16, src: Images[16], alt: "sneaker ball event", type: "image" },
+				{ id: 17, src: Images[17], alt: "sneaker ball event", type: "image" },
+			],
+		},
+		{
+			id: 2,
+			name: "Mentorship Dinner 2025",
+			subtitle: "Nourishing the Future—One Conversation at a Time.",
+			images: [
+				{
+					id: 8,
+					src: Images[18],
+					alt: "Mentorship Dinner event",
+					type: "image",
+				},
+				{
+					id: 9,
+					src: Images[19],
+					alt: "Mentorship Dinner event",
+					type: "image",
+				},
+				{
+					id: 10,
+					src: Images[20],
+					alt: "Mentorship Dinner event",
+					type: "image",
+				},
+				{
+					id: 11,
+					src: Images[21],
+					alt: "Mentorship Dinner event",
+					type: "image",
+				},
+			],
+		},
+		{
+			id: 3,
+			name: "Thanksgiving Drive 2024",
+			subtitle: "Stuffing More Than Turkeys—Hearts Too.",
+			images: [
+				{
+					id: 0,
+					src: Images[22],
+					alt: "Thanksgiving Drive event",
+					type: "image",
+				},
+				{
+					id: 1,
+					src: Images[23],
+					alt: "Thanksgiving Drive event",
+					type: "image",
+				},
+				{
+					id: 2,
+					src: Images[24],
+					alt: "Thanksgiving Drive event",
+					type: "image",
+				},
+				{
+					id: 3,
+					src: Images[25],
+					alt: "Thanksgiving Drive event",
+					type: "image",
+				},
+				{
+					id: 4,
+					src: Images[26],
+					alt: "Thanksgiving Drive event",
+					type: "image",
+				},
 			],
 		},
 	],
@@ -88,9 +163,7 @@ const EventsImageGallery = ({
 					className={`fixed inset-y-0 left-0 z-50 w-64 bg-white transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0 ${
 						sidebarOpen ? "translate-x-0" : "-translate-x-full"
 					}`}>
-					<div
-						className='flex flex-col h-full px-8 py-12'
-						style={{ "box-shadow": "1px 1px 6px 0px rgba(0,0,0,0.13)" }}>
+					<div className='flex flex-col h-full px-8 py-12'>
 						{/* Navigation */}
 						<nav className='flex-1 space-y-6'>
 							{events.map((event) => (
@@ -170,10 +243,10 @@ const EventsImageGallery = ({
 					{/* Content header */}
 					<div className='px-6 lg:px-16 py-12 lg:py-16'>
 						<div className='max-w-6xl mx-auto flex flex-col items-center'>
-							<h2 className='font-bold text-3xl lg:text-6xl font-light text-gray-900 mb-4 leading-tight'>
+							<h1 className='text-4xl font-bold lg:text-6xl font-light text-gray-900 mb-4 leading-tight'>
 								{selectedEvent.name}
-							</h2>
-							<p className='text-lg lg:text-xl text-gray-600 max-w-2xl leading-relaxed text-center'>
+							</h1>
+							<p className='text-lg lg:text-xl text-gray-600 max-w-2xl leading-relaxed'>
 								{selectedEvent.subtitle}
 							</p>
 						</div>
@@ -186,26 +259,7 @@ const EventsImageGallery = ({
 								{selectedEvent.images.map((media, index) => (
 									<div
 										key={media.id}
-										className={`relative overflow-hidden group cursor-pointer ${
-											// Create varied heights for masonry effect
-											index % 7 === 0
-												? "row-span-2"
-												: index % 5 === 0
-												? "row-span-3"
-												: index % 3 === 0
-												? "row-span-2"
-												: ""
-										}`}
-										style={{
-											aspectRatio:
-												index % 7 === 0
-													? "1/1.5"
-													: index % 5 === 0
-													? "1/2"
-													: index % 3 === 0
-													? "1/1.3"
-													: "1/1",
-										}}>
+										className={`relative overflow-hidden group cursor-pointer`}>
 										{renderMedia(media, index)}
 										<div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300' />
 
