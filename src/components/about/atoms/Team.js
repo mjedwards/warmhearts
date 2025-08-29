@@ -27,13 +27,20 @@ const team = [
 		imageUrl: "https://storage.googleapis.com/whms_images/images/angela.png",
 		location: "Florida, US",
 	},
-	// {
-	// 	name: "Dr. Joanette Brookes-George",
-	// 	role: "Director",
-	// 	imageUrl:
-	// 		"https://storage.googleapis.com/whms_images/images/team/dr_joanette-removebg-preview.png",
-	// 	location: "Florida, US",
-	// },
+	{
+		name: "Dr. Joanette Brookes-George",
+		role: "Public Communications Director",
+		imageUrl:
+			"https://storage.googleapis.com/whms_images/images/team/dr_joanette-removebg-preview.png",
+		location: "Florida, US",
+	},
+	{
+		name: "Myriam Goldman",
+		role: "Treasurer",
+		imageUrl:
+			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
+		location: "Florida, US",
+	},
 	{
 		name: "Felicity Swanson",
 		role: "Secretary",
