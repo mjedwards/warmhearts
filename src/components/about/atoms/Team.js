@@ -3,43 +3,42 @@ import React from "react";
 const team = [
 	{
 		name: "Veronne McMain",
-		role: "CEO",
-		imageUrl: "https://storage.googleapis.com/whms_images/images/team/vm-removebg-preview.png",
-		location: "Florida, US",
-	},
-	{
-		name: "Marci Bennett",
-		role: "President",
+		role: "Founder",
 		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/marci_benett__3_-removebg-preview.png",
+			"https://storage.googleapis.com/whms_images/images/team/vm-removebg-preview.png",
 		location: "Florida, US",
 	},
 	{
 		name: "Ruth Cater Lynch",
-		role: "Vice President",
+		role: "President",
 		imageUrl:
 			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
 		location: "Florida, US",
 	},
 	{
-		name: "Dr. Joanette Brookes-George",
-		role: "Director",
-		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/dr_joanette-removebg-preview.png",
+		name: "Dr. Sherell Hobbs",
+		role: "Vice President",
+		imageUrl: "https://storage.googleapis.com/whms_images/images/Sherrell.png",
 		location: "Florida, US",
 	},
+	{
+		name: "Dr. Angela Brewton",
+		role: "Director",
+		imageUrl: "https://storage.googleapis.com/whms_images/images/angela.png",
+		location: "Florida, US",
+	},
+	// {
+	// 	name: "Dr. Joanette Brookes-George",
+	// 	role: "Director",
+	// 	imageUrl:
+	// 		"https://storage.googleapis.com/whms_images/images/team/dr_joanette-removebg-preview.png",
+	// 	location: "Florida, US",
+	// },
 	{
 		name: "Felicity Swanson",
 		role: "Secretary",
 		imageUrl:
 			"https://storage.googleapis.com/whms_images/images/team/felicity__1_-removebg-preview.png",
-		location: "Florida, US",
-	},
-	{
-		name: "Maya Gee",
-		role: "Public Relations (PR)",
-		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
 		location: "Florida, US",
 	},
 ];
@@ -61,8 +60,7 @@ function Team() {
 						Let's make a difference together!
 					</p>
 				</div>
-				<ul
-					className='mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
+				<ul className='mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
 					{team.map(({ name, role, imageUrl, location }) => (
 						<li key={name} className='relative'>
 							{" "}
