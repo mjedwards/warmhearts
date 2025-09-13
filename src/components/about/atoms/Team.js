@@ -38,7 +38,7 @@ const team = [
 		name: "Myriam Goldman",
 		role: "Treasurer",
 		imageUrl:
-			"https://storage.googleapis.com/whms_images/images/team/placeholder.jpeg",
+			"https://storage.googleapis.com/whms_images/images/myriam.png",
 		location: "Florida, US",
 	},
 	{
