@@ -1,9 +1,17 @@
 import React from "react";
 
 export default function MentorForm() {
+	const onsubmit = () => {
+		sessionStorage.setItem("formSubmitted", "true");
+	};
 	return (
 		<div className='flex flex-col items-center justify-items-center py-20 bg-white'>
-			<form className='w-full max-w-lg' name='contact' method='POST'>
+			<form
+				className='w-full max-w-lg'
+				name='contact'
+				method='POST'
+				action='/thank-you'
+				onSubmit={onsubmit}>
 				<input type='hidden' name='form-name' value='contact' />
 				<div className='flex flex-wrap mb-6'>
 					<div className='w-full px-3 mb-6 md:mb-0'>
