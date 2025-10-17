@@ -11,21 +11,10 @@ export default function Contact() {
 			<form
 				name='contact'
 				method='POST'
-				// action='/thank-you'
+				action='/thank-you'
 				data-netlify='true'
 				netlify-honeypot='bot-field'
-				// onSubmit={onsubmit}
-				onSubmit={(e) => {
-					// Always set the flag
-					sessionStorage.setItem("formSubmitted", "true");
-
-					// In local dev without Netlify Dev, simulate success
-					if (window.location.hostname === "localhost") {
-						e.preventDefault(); // stop native POST
-						// optionally: actually POST with fetch("/") if you run `netlify dev`
-						window.location.href = "/thank-you"; // simulate the redirect
-					}
-				}}
+				onSubmit={onsubmit}
 				className='w-full max-w-lg'>
 				{/* Required hidden input for Netlify */}
 				<input type='hidden' name='form-name' value='contact' />
