@@ -10,6 +10,7 @@ import ActionPage from "./pages/action";
 import Footer from "./components/navigation/footer";
 import EventsPage from "./pages/events";
 import EventsGalleryPage from "./pages/eventsGallery";
+import ThankYou from "./components/forms/thankYou";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Route path='/Events' component={EventsPage}></Route>
 					<Route path='/Take-Action' component={ActionPage}></Route>
 					<Route path='/Gallery' component={EventsGalleryPage}></Route>
+					<Route path='/thank-you' component={ThankYou}></Route>
 					{/* <Route default component={NotFound}></Route> */}
 				</Switch>
 				<Footer />
