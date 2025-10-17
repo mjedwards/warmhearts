@@ -11,6 +11,7 @@ export default function MentorForm() {
 				name='contact'
 				method='POST'
 				action='/thank-you'
+				data-netlify='true'
 				onSubmit={onsubmit}>
 				<input type='hidden' name='form-name' value='contact' />
 				<div className='flex flex-wrap mb-6'>
