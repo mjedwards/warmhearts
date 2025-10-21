@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { X, Menu } from "lucide-react";
 import Images from "./images/images";
 import Hero from "./atoms/GalleryHero";
 

@@ -187,7 +187,7 @@ const StudentSurveyChart = () => {
       d3.select("body").selectAll(".tooltip").remove();
     };
 
-  }, []);
+  }, [colors, data, responses]);
 
   return (
     <div className="w-full flex justify-center">

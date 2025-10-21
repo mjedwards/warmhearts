@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Hero from "../components/shared/Hero";
 import StudentSurveyChart from "../components/shared/StudentSurveyChart";
 import blobImage from "../ui/assets/hero/blob.png";
 import menuItemBg from "../ui/assets/about_us/menu_item_bg.png";

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Hero from "../components/shared/Hero";
 import DonutChart from "../components/shared/DonutChart";
 
 export default function HomePage() {
