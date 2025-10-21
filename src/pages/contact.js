@@ -49,7 +49,7 @@ export default function ContactPage() {
 				name='contact'
 				method='POST'
 				data-netlify='true'
-				data-netlify-redirect='/thank-you'
+				data-netlify-redirect='/thank-you?submitted=true'
 				onSubmit={onsubmit}>
 				<div className='bg-gray-100 py-16 relative'>
 					{/* Curved section divider */}

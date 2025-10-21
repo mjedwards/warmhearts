@@ -26,12 +26,16 @@ export default function ThankYou() {
 	const firedRef = useRef(false);
 
 	useEffect(() => {
-		const isFormSubmission = sessionStorage.getItem("formSubmitted");
+		// Check both sessionStorage and URL parameter
+		const isFormSubmission = sessionStorage.getItem("formSubmitted") === "true";
+		const urlParams = new URLSearchParams(window.location.search);
+		const isFromForm = urlParams.get("submitted") === "true";
 
 		if (firedRef.current) return;
 		firedRef.current = true;
 
-		if (isFormSubmission !== "true") {
+		// Allow access if either sessionStorage or URL parameter indicates form submission
+		if (!isFormSubmission && !isFromForm) {
 			navigate.replace("/");
 			return;
 		}
