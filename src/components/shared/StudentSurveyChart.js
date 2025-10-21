@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useMemo } from 'react';
 import * as d3 from 'd3';
 
 const StudentSurveyChart = () => {
   const svgRef = useRef();
 
-  const data = [
+  const data = useMemo(() => [
     {
       question: "Feel better about myself",
       values: [64, 36, 0, 0]
@@ -25,10 +25,10 @@ const StudentSurveyChart = () => {
       question: "Make me successful",
       values: [36, 50, 6, 8]
     }
-  ];
+  ], []);
 
-  const responses = ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"];
-  const colors = ["#EF4444", "#F59E0B", "#EDE047", "#84CC16"]; // Red, Orange, Yellow, Green
+  const responses = useMemo(() => ["Strongly Agree", "Agree", "Disagree", "Strongly Disagree"], []);
+  const colors = useMemo(() => ["#EF4444", "#F59E0B", "#EDE047", "#84CC16"], []); // Red, Orange, Yellow, Green
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
