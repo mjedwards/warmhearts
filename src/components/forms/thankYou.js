@@ -31,7 +31,7 @@ export default function ThankYou() {
 		if (firedRef.current) return;
 		firedRef.current = true;
 
-		if (isFormSubmission !== true) {
+		if (isFormSubmission !== "true") {
 			navigate.replace("/");
 			return;
 		}

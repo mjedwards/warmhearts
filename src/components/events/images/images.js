@@ -1,9 +1,7 @@
 const Images = [
 	require("../../../ui/assets/photos/sneakerball/Sneaker_ball_mar2025.mp4")
 		.default,
-	require("../../../ui/assets/photos/sneakerball/sb1.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb2.jpeg").default,
-	require("../../../ui/assets/photos/sneakerball/sb3.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb4.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb5.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb6.jpeg").default,
@@ -11,6 +9,7 @@ const Images = [
 	require("../../../ui/assets/photos/sneakerball/sb8.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb9.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb10.jpeg").default,
+	require("../../../ui/assets/photos/sneakerball/sb11.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb12.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb13.jpeg").default,
 	require("../../../ui/assets/photos/sneakerball/sb14.jpeg").default,
@@ -27,6 +26,9 @@ const Images = [
 	require("../../../ui/assets/photos/thanksgiving2024/tg3.jpg").default,
 	require("../../../ui/assets/photos/thanksgiving2024/tg4.jpg").default,
 	require("../../../ui/assets/photos/thanksgiving2024/tg5.jpg").default,
+	require("../../../ui/assets/photos/thanksgiving2024/tg6.jpg").default,
+	require("../../../ui/assets/photos/thanksgiving2024/tg7.jpg").default,
+	require("../../../ui/assets/photos/thanksgiving2024/tg8.jpg").default,
 ];
 
 export default Images;

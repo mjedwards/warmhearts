@@ -13,41 +13,42 @@ function MobileNav({ isOpen }) {
 			leaveFrom='opacity-100 scale-100'
 			leaveTo='opacity-0 scale-95'>
 			{(ref) => (
-				<div className='md:hidden bg-gray-800 z-10' id='mobile-menu'>
+				<div className='md:hidden bg-gray-800 z-50' id='mobile-menu'>
 					<div
 						ref={ref}
 						className='px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center'>
 						<NavLink
-							to='/Who-We-Are'
-							className='hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium'>
-							Who We Are
-						</NavLink>
-
-						<NavLink
-							to='/What-We-Do'
-							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
-							What We Do
+							to='/'
+							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							Home
 						</NavLink>
 						<NavLink
-							to='/Events'
-							className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-							Upcoming Events
+							to='/about'
+							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							About
 						</NavLink>
 						<NavLink
-							to='/Take-Action'
-							className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
+							to='/mission'
+							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							Mission
+						</NavLink>
+						<NavLink
+							to='/events'
+							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							Events
+						</NavLink>
+						<NavLink
+							to='/contact'
+							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
 							Contact
-						</NavLink>
-						<NavLink
-							to='/Gallery'
-							className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-							Events Gallery
 						</NavLink>
 
 						<a
 							href='https://www.paypal.com/donate/?hosted_button_id=LVRU65QJUS29E'
-							className='rounded-3xl p-1 text-center cursor-pointer border-2 mt-1 w-1/4'
-							style={{ borderColor: "#EC523D", color: "#EC523D" }}>
+							target='_blank'
+							rel='noopener noreferrer'
+							className='text-white px-6 py-2 rounded-full font-medium mt-4'
+							style={{backgroundColor: '#ec523d'}}>
 							Donate
 						</a>
 					</div>

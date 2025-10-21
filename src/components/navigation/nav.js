@@ -17,48 +17,43 @@ function Nav() {
 								</NavLink>
 							</div>
 							<div className='hidden md:flex w-full justify-center'>
-								<div className='ml-10 flex items-baseline space-x-4'>
+								<div className='ml-10 flex items-baseline space-x-8'>
 									<NavLink
 										to='/'
-										className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'>
+										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Home
 									</NavLink>
 									<NavLink
-										to='/Who-We-Are'
-										className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'>
-										Who We Are
+										to='/about'
+										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										About
 									</NavLink>
-
 									<NavLink
-										to='/What-We-Do'
-										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-										What We Do
+										to='/mission'
+										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										Mission
 									</NavLink>
-
 									<NavLink
-										to='/Events'
-										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-										Upcoming Events
+										to='/events'
+										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										Events
 									</NavLink>
-
 									<NavLink
-										to='/Take-Action'
-										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-										Take Action
-									</NavLink>
-
-									<NavLink
-										to='/Gallery'
-										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
-										Events Gallery
+										to='/contact'
+										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										Contact
 									</NavLink>
 								</div>
 							</div>
 						</div>
 						<a
 							href='https://www.paypal.com/donate/?hosted_button_id=LVRU65QJUS29E'
-							className='hidden md:block rounded-3xl p-1 text-center w-1/4 cursor-pointer border-2 w-1/6'
-							style={{ borderColor: "#EC523D", color: "#EC523D" }}>
+							target='_blank'
+							rel='noopener noreferrer'
+							className='hidden md:block text-white px-6 py-2 rounded-full font-medium transition-colors duration-200'
+							style={{backgroundColor: '#ec523d'}}
+							onMouseEnter={(e) => e.target.style.backgroundColor = '#d63927'}
+							onMouseLeave={(e) => e.target.style.backgroundColor = '#ec523d'}>
 							Donate
 						</a>
 						<div className='-mr-2 flex md:hidden'>
