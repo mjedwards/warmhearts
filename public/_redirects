@@ -1,2 +1,5 @@
-/thank-you /index.html 200
+# Handle form submissions
+/thank-you /index.html 200!
+
+# SPA fallback
 /* /index.html 200
