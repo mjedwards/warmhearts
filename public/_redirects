@@ -1,5 +1,2 @@
-# Handle form submissions
-/thank-you /index.html 200!
-
-# SPA fallback
+# SPA fallback - handles all routes including /thank-you
 /* /index.html 200

@@ -48,8 +48,8 @@ export default function ContactPage() {
 			<form
 				name='contact'
 				method='POST'
-				action='/thank-you'
 				data-netlify='true'
+				data-netlify-redirect='/thank-you'
 				onSubmit={onsubmit}>
 				<div className='bg-gray-100 py-16 relative'>
 					{/* Curved section divider */}
