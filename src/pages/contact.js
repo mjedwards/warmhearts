@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import blobImage from "../ui/assets/hero/blob.png";
 import mailIcon from "../ui/assets/icons/mail_icon.png";
 import pinIcon from "../ui/assets/icons/pin.png";
