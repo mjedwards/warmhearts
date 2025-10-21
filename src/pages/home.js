@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DonutChart from "../components/shared/DonutChart";
 
 export default function HomePage() {
@@ -82,9 +83,9 @@ export default function HomePage() {
 							<p className='text-2xl font-bold'>Igniting Hope</p>
 						</div>
 						<div className='flex flex-col sm:flex-row gap-4'>
-							<button className='text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 min-w-[160px]' style={{backgroundColor: '#ec523d'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#d63927'} onMouseLeave={(e) => e.target.style.backgroundColor = '#ec523d'}>
+							<Link to="/about" className='text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 min-w-[160px] inline-block text-center' style={{backgroundColor: '#ec523d'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#d63927'} onMouseLeave={(e) => e.target.style.backgroundColor = '#ec523d'}>
 								Learn More
-							</button>
+							</Link>
 							<button
 								onClick={openVideoModal}
 								className='border-2 border-white bg-white px-8 py-4 rounded-full font-semibold text-lg transition-colors duration-200 min-w-[160px]'
