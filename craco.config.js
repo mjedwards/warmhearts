@@ -2,9 +2,11 @@ const path = require("path");
 const CracoBabelLoader = require("craco-babel-loader");
 
 module.exports = {
-	style: {
-		postcss: {
-			plugins: [require("tailwindcss"), require("autoprefixer")],
+	jest: {
+		configure: {
+			moduleNameMapper: {
+				d3: "<rootDir>/src/__mocks__/d3.js",
+			},
 		},
 	},
 	plugins: [

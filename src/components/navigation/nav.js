@@ -20,27 +20,27 @@ function Nav() {
 								<div className='ml-10 flex items-baseline space-x-8'>
 									<NavLink
 										to='/'
-										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Home
 									</NavLink>
 									<NavLink
 										to='/about'
-										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										About
 									</NavLink>
 									<NavLink
 										to='/mission'
-										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Mission
 									</NavLink>
 									<NavLink
 										to='/events'
-										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Events
 									</NavLink>
 									<NavLink
 										to='/contact'
-										className='text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Contact
 									</NavLink>
 								</div>

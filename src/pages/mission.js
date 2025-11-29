@@ -36,7 +36,7 @@ export default function MissionPage() {
 							holistic development, and create a more inclusive and supportive
 							environment for all.
 						</p>
-						<p className='text-sm md:text-base text-orange-400 mt-4 font-medium'>
+						<p className='text-sm md:text-base text-white mt-4 font-medium'>
 							Empowering Youth, One Mentor at a Time.
 						</p>
 					</div>
