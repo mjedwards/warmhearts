@@ -13,33 +13,33 @@ function MobileNav({ isOpen }) {
 			leaveFrom='opacity-100 scale-100'
 			leaveTo='opacity-0 scale-95'>
 			{(ref) => (
-				<div className='md:hidden bg-gray-800 z-50' id='mobile-menu'>
+				<div ref={ref} className='md:hidden bg-gray-800 z-50' id='mobile-menu'>
 					<div
-						ref={ref}
+						
 						className='px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center'>
 						<NavLink
 							to='/'
-							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							Home
 						</NavLink>
 						<NavLink
 							to='/about'
-							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							About
 						</NavLink>
 						<NavLink
 							to='/mission'
-							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							Mission
 						</NavLink>
 						<NavLink
 							to='/events'
-							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							Events
 						</NavLink>
 						<NavLink
 							to='/contact'
-							className='text-white hover:text-orange-400 block px-3 py-2 rounded-md text-base font-medium'>
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							Contact
 						</NavLink>
 

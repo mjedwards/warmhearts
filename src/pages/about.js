@@ -58,7 +58,7 @@ export default function AboutPage() {
             <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
               Every child deserves an equal opportunity to thrive. Understanding the hardships some communities face, our team is dedicated to providing reliable support and fostering a culture of responsibility and achievement. We aspire to be a pillar of strength, guiding the next generation toward leadership and success.
             </p>
-            <p className="text-sm md:text-base text-orange-400 mt-4 font-medium">
+            <p className="text-sm md:text-base text-white mt-4 font-medium">
               Nurturing Potential. Cultivating Leaders.
             </p>
           </div>

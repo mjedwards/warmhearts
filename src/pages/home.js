@@ -627,19 +627,7 @@ export default function HomePage() {
 								/>
 							</div>
 						</div>
-						<style jsx>{`
-							@keyframes scroll {
-								0% {
-									transform: translateX(0);
-								}
-								100% {
-									transform: translateX(-50%);
-								}
-							}
-							.animate-scroll {
-								animation: scroll 20s linear infinite;
-							}
-						`}</style>
+
 					</div>
 				</div>
 			</div>
@@ -662,15 +650,19 @@ export default function HomePage() {
 					</h3>
 
 					<div className='flex justify-center'>
-						<button
-							className='px-12 py-4 rounded-full font-bold text-xl transition-colors duration-200 text-white'
-							style={{ backgroundColor: "#ec523d" }}
-							onMouseEnter={(e) => (e.target.style.backgroundColor = "#d63927")}
-							onMouseLeave={(e) =>
-								(e.target.style.backgroundColor = "#ec523d")
-							}>
-							Contact Us
-						</button>
+						<Link to='/contact'>
+							<button
+								className='px-12 py-4 rounded-full font-bold text-xl transition-colors duration-200 text-white'
+								style={{ backgroundColor: "#ec523d" }}
+								onMouseEnter={(e) =>
+									(e.target.style.backgroundColor = "#d63927")
+								}
+								onMouseLeave={(e) =>
+									(e.target.style.backgroundColor = "#ec523d")
+								}>
+								Contact Us
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -704,18 +696,20 @@ export default function HomePage() {
 								<br />
 								Warmheart Mentorship: Empowering Families, Building Futures.
 							</p>
-							<div className='flex items-center gap-2 cursor-pointer group text-left'>
-								<span
-									className='text-lg font-semibold'
-									style={{ color: "#ec523d" }}>
-									Learn More
-								</span>
-								<span
-									className='transition-transform group-hover:translate-x-1'
-									style={{ color: "#ec523d" }}>
-									→
-								</span>
-							</div>
+							<Link to='/events'>
+								<div className='flex items-center gap-2 cursor-pointer group text-left'>
+									<span
+										className='text-lg font-semibold'
+										style={{ color: "#ec523d" }}>
+										Learn More
+									</span>
+									<span
+										className='transition-transform group-hover:translate-x-1'
+										style={{ color: "#ec523d" }}>
+										→
+									</span>
+								</div>
+							</Link>
 						</div>
 
 						<div className='relative overflow-hidden w-[592px]'>

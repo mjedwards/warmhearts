@@ -30,7 +30,7 @@ export default function GalleryPage() {
             <p className="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
               Discover moments of connection, growth, and joy through our community events and mentoring activities. These images capture the heart of our mission in action.
             </p>
-            <p className="text-sm md:text-base text-orange-400 mt-4 font-medium">
+            <p className="text-sm md:text-base text-[#EC523D] mt-4 font-medium">
               Moments That Matter. Stories That Inspire.
             </p>
           </div>
