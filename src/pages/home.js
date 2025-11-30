@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DonutChart from "../components/shared/DonutChart";
+import { fetchCarouselImages, fetchSponsors } from "../lib/sanityQueries";
+import { urlFor } from "../lib/sanity";
 
 export default function HomePage() {
 	// Chart data
@@ -16,98 +18,58 @@ export default function HomePage() {
 
 	// Carousel state
 	const [currentSlide, setCurrentSlide] = useState(0);
+	const [carouselCards, setCarouselCards] = useState([]);
+
+	// Sponsors state
+	const [sponsors, setSponsors] = useState([]);
 
 	// Video modal state
 	const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
-	const carouselCards = [
-		{
-			title: "Community Event",
-			description: "Join us for our annual community gathering",
-			image: "/carousel/0.jpg",
-		},
-		{
-			title: "Thanksgiving Giveaway",
-			description: "Supporting families during the holidays",
-			image: "/carousel/1.jpg",
-		},
-		{
-			title: "Thanksgiving Giveaway",
-			description: "Giving out thanksgiving baskets",
-			image: "/carousel/2.jpg",
-		},
-		{
-			title: "Thanksgiving Food Drive",
-			description: "Annual drive to support families in the community",
-			image: "/carousel/3.jpg",
-		},
-		{
-			title: "Mentorship Dinner",
-			description: "Celebrating our mentees",
-			image: "/carousel/4.jpg",
-		},
-		{
-			title: "Mentorship Dinner",
-			description: "Showing appreciation for our mentors",
-			image: "/carousel/5.jpg",
-		},
-		{
-			title: "Mentorship Dinner",
-			description: "Annual mentor and mentee gathering",
-			image: "/carousel/6.jpg",
-		},
-		{
-			title: "Mentor Appreciation",
-			description: "Celebrating the professionals who help our program",
-			image: "/carousel/7.jpg",
-		},
-		{
-			title: "Mentorship Breakfast",
-			description: "Annual gathering to support the program",
-			image: "/carousel/8.JPG",
-		},
-		{
-			title: "Mentorship Breakfast",
-			description: "Building camaraderie to start the year off right",
-			image: "/carousel/9.JPG",
-		},
-		{
-			title: "Mentorship Breakfast",
-			description: "Connecting and building bonds with other mentors",
-			image: "/carousel/10.JPG",
-		},
-		{
-			title: "Mentorship",
-			description: "Providing love and support",
-			image: "/carousel/11.jpg",
-		},
-		{
-			title: "Sneaker Ball",
-			description: "A fundraiser for networking and supporting our program",
-			image: "/carousel/12.jpeg",
-		},
-		{
-			title: "Sneaker Ball",
-			description:
-				"Providing fun and unique experiences for our mentors and mentees",
-			image: "/carousel/13.jpeg",
-		},
-		{
-			title: "Mentorship Breakfast",
-			description: "Celebrating mentorship excellence",
-			image: "/carousel/14.JPG",
-		},
-		{
-			title: "Mentorship Breakfast",
-			description: "Uplifting our community",
-			image: "/carousel/15.jpg",
-		},
-	];
+	// Fetch carousel images and sponsors from CMS
+	useEffect(() => {
+		async function loadCarouselImages() {
+			try {
+				const images = await fetchCarouselImages();
 
-	const maxSlides = Math.ceil(carouselCards.length / 2) - 1;
+				// Transform Sanity data to match expected carousel structure
+				const formattedCards = images.map((img) => ({
+					_id: img._id,
+					title: img.title,
+					description: img.description || "",
+					image: urlFor(img.image).width(600).height(600).url(),
+					alt: img.image.alt || img.title,
+				}));
+
+				setCarouselCards(formattedCards);
+			} catch (error) {
+				console.error("Error fetching carousel images:", error);
+				// Fallback to empty array if fetch fails
+				setCarouselCards([]);
+			}
+		}
+
+		async function loadSponsors() {
+			try {
+				const data = await fetchSponsors();
+				setSponsors(data);
+			} catch (error) {
+				console.error("Error fetching sponsors:", error);
+				setSponsors([]);
+			}
+		}
+
+		loadCarouselImages();
+		loadSponsors();
+	}, []);
+
+	const maxSlides =
+		carouselCards.length > 0 ? Math.ceil(carouselCards.length / 2) - 1 : 0;
 
 	const nextSlide = () => {
-		setCurrentSlide((prev) => (prev < maxSlides ? prev + 1 : 0));
+		if (carouselCards.length > 0) {
+			setCurrentSlide((prev) => (prev < maxSlides ? prev + 1 : 0));
+		}
 	};
 
 	// Video modal handlers
@@ -549,85 +511,40 @@ export default function HomePage() {
 
 					{/* Sponsor Logos - Infinite Scroll */}
 					<div className='w-full overflow-hidden py-8'>
-						<div className='flex animate-scroll'>
-							{/* First set of logos */}
-							<div className='flex items-center gap-16 min-w-max'>
-								<img
-									alt='CPR sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/cpr.webp'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Dales sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/dales.png'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='GBA sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/gba.jpeg'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Jet Express sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/jetexpress.webp'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Lauderhill sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/lauderhill.png'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
+						{sponsors.length > 0 ? (
+							<div className='flex animate-scroll'>
+								{/* First set of logos */}
+								<div className='flex items-center gap-16 min-w-max'>
+									{sponsors.map((sponsor) => (
+										<img
+											key={sponsor._id}
+											alt={sponsor.logo.alt || sponsor.name}
+											src={urlFor(sponsor.logo).width(280).height(128).url()}
+											width='140'
+											height='64'
+											className='max-h-16 object-contain'
+										/>
+									))}
+								</div>
+								{/* Duplicate set for seamless loop */}
+								<div className='flex items-center gap-16 min-w-max'>
+									{sponsors.map((sponsor) => (
+										<img
+											key={`${sponsor._id}-duplicate`}
+											alt={sponsor.logo.alt || sponsor.name}
+											src={urlFor(sponsor.logo).width(280).height(128).url()}
+											width='140'
+											height='64'
+											className='max-h-16 object-contain'
+										/>
+									))}
+								</div>
 							</div>
-							{/* Duplicate set for seamless loop */}
-							<div className='flex items-center gap-16 min-w-max'>
-								<img
-									alt='CPR sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/cpr.webp'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Dales sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/dales.png'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='GBA sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/gba.jpeg'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Jet Express sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/jetexpress.webp'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
-								<img
-									alt='Lauderhill sponsor'
-									src='https://storage.googleapis.com/whms_images/images/sponsors/lauderhill.png'
-									width='140'
-									height='64'
-									className='max-h-16 object-contain'
-								/>
+						) : (
+							<div className='text-center text-gray-500'>
+								<p>Loading sponsors...</p>
 							</div>
-						</div>
-
+						)}
 					</div>
 				</div>
 			</div>
@@ -712,19 +629,19 @@ export default function HomePage() {
 							</Link>
 						</div>
 
-						<div className='relative overflow-hidden w-[592px]'>
+						<div className='relative overflow-hidden w-[600px]'>
 							<div
 								className='flex transition-transform duration-300 ease-in-out'
 								style={{
-									transform: `translateX(-${currentSlide * 592}px)`,
+									transform: `translateX(-${currentSlide * 600}px)`,
 								}}>
 								{Array.from({
 									length: Math.ceil(carouselCards.length / 2),
 								}).map((_, slideIndex) => (
 									<div
 										key={slideIndex}
-										className='flex gap-6 justify-start'
-										style={{ width: "592px", flexShrink: 0 }}>
+										className='flex gap-10 justify-start'
+										style={{ width: "600px", flexShrink: 0 }}>
 										{carouselCards
 											.slice(slideIndex * 2, slideIndex * 2 + 2)
 											.map((card, cardIndex) => (

@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StudentSurveyChart from "../components/shared/StudentSurveyChart";
 import blobImage from "../ui/assets/hero/blob.png";
 import menuItemBg from "../ui/assets/about_us/menu_item_bg.png";
 import menuItemDefinitionBg from "../ui/assets/about_us/menu_item_definition_bg.png";
-import ruthImage from "../ui/assets/about_us/team/ruth.png";
-import angelaImage from "../ui/assets/about_us/team/angela_br.png";
-import joanetteImage from "../ui/assets/about_us/team/joanette_br.png";
-import myriamImage from "../ui/assets/about_us/team/myriam_go.png";
-import felicityImage from "../ui/assets/about_us/team/felicity_sw.png";
-import sherellImage from "../ui/assets/about_us/team/sherell.png";
+import { fetchTeamMembers } from "../lib/sanityQueries";
+import { urlFor } from "../lib/sanity";
 
 export default function AboutPage() {
   const [selectedValue, setSelectedValue] = useState('unity');
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [loadingTeam, setLoadingTeam] = useState(true);
 
   const values = {
     unity: {
@@ -39,6 +37,22 @@ export default function AboutPage() {
       definition: 'We inspire leadership by exposing mentees to diverse role models and continuously seek new ideas to enhance our mission and expand our program\'s positive impact.'
     }
   };
+
+  // Fetch team members from CMS
+  useEffect(() => {
+    async function loadTeamMembers() {
+      try {
+        const data = await fetchTeamMembers();
+        setTeamMembers(data);
+      } catch (error) {
+        console.error('Error fetching team members:', error);
+      } finally {
+        setLoadingTeam(false);
+      }
+    }
+
+    loadTeamMembers();
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -186,87 +200,31 @@ export default function AboutPage() {
             Meet The Team
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Team Member 1 */}
+          {loadingTeam ? (
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={ruthImage}
-                  alt="Ruth Carter Lynch"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Ruth Carter Lynch</h3>
-              <p className="text-gray-600">President</p>
+              <p className="text-gray-500 text-lg">Loading team members...</p>
             </div>
-
-            {/* Team Member 2 */}
+          ) : teamMembers.length > 0 ? (
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {teamMembers.map((member) => (
+                <div key={member._id} className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full">
+                    <img
+                      src={urlFor(member.image).width(256).height(256).url()}
+                      alt={member.image.alt || member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-bold text-lg text-gray-800">{member.name}</h3>
+                  <p className="text-gray-600">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={sherellImage}
-                  alt="Dr. Shaneil Hobbs"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Dr. Sherell Hobbs</h3>
-              <p className="text-gray-600">Vice President</p>
+              <p className="text-gray-500 text-lg">No team members to display.</p>
             </div>
-
-            {/* Team Member 3 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={angelaImage}
-                  alt="Dr. Angela Brinston"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Dr. Angela Brewton</h3>
-              <p className="text-gray-600">Director</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Team Member 4 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={joanetteImage}
-                  alt="Dr. Juliette Browder-George"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Dr. Joanette Brookes-George</h3>
-              <p className="text-gray-600">Public Communications Director</p>
-            </div>
-
-            {/* Team Member 5 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={myriamImage}
-                  alt="Maryam Cochran"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Myriam Goldman</h3>
-              <p className="text-gray-600">Treasurer</p>
-            </div>
-
-            {/* Team Member 6 */}
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden">
-                <img
-                  src={felicityImage}
-                  alt="Felicity Swanson"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">Felicity Swanson</h3>
-              <p className="text-gray-600">Secretary</p>
-            </div>
-          </div>
+          )}
 
           <div className="text-center mt-12">
             <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto">
