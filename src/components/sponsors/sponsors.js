@@ -1,16 +1,27 @@
 import { Link } from "@material-ui/core";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { fetchSponsors } from "../../lib/sanityQueries";
+import { urlFor } from "../../lib/sanity";
 
 export default function Sponsors() {
-	
-	const url = "https://storage.googleapis.com/whms_images/images/sponsors/";
-	const sponsors = [
-		"cpr.webp",
-		"dales.png",
-		"gba.jpeg",
-		"jetexpress.webp",
-		"lauderhill.png",
-	];
+	const [sponsors, setSponsors] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		async function loadSponsors() {
+			try {
+				const data = await fetchSponsors();
+				setSponsors(data);
+			} catch (error) {
+				console.error("Error fetching sponsors:", error);
+			} finally {
+				setLoading(false);
+			}
+		}
+
+		loadSponsors();
+	}, []);
+
 	return (
 		<>
 			<div className='bg-gray-900 py-24 sm:py-32'>
@@ -38,15 +49,22 @@ export default function Sponsors() {
 							</div>
 						</div>
 						<div className='mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8'>
-							{sponsors.map((sponsor) => (
-								<img
-									alt='sponsor'
-									src={`${url}${sponsor}`}
-									width={105}
-									height={48}
-									className='max-h-12 w-full object-contain object-left'
-								/>
-							))}
+							{loading ? (
+								<p className='text-white'>Loading sponsors...</p>
+							) : sponsors.length > 0 ? (
+								sponsors.map((sponsor) => (
+									<img
+										key={sponsor._id}
+										alt={sponsor.logo.alt || sponsor.name}
+										src={urlFor(sponsor.logo).width(210).height(96).url()}
+										width={105}
+										height={48}
+										className='max-h-12 w-full object-contain object-left'
+									/>
+								))
+							) : (
+								<p className='text-white'>No sponsors to display.</p>
+							)}
 						</div>
 					</div>
 				</div>
