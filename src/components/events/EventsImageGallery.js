@@ -130,9 +130,9 @@ const EventsImageGallery = () => {
 									style={{ color: "#ec523d" }}>
 									No Events Found
 								</h2>
-								<p className='text-gray-500 text-lg'>
+								{/* <p className='text-gray-500 text-lg'>
 									Upload event images in the CMS to see them here!
-								</p>
+								</p> */}
 							</div>
 						</div>
 					</div>
@@ -158,8 +158,8 @@ const EventsImageGallery = () => {
 							d='M0 0v4s250 96 500 96 500-96 500-96V0H0Z'
 							fill='#1F2937'></path>
 					</svg>
-					<div className='max-w-7xl mx-auto px-6 pt-24'>
-						<div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
+					<div className='max-w-7xl mx-auto px-6 pt-24 flex flex-col items-center justify-center'>
+						<div className='flex flex-col-reverse mb-5 gap-5 lg:items-center lg:justify-between'>
 							{/* Title */}
 							<h1
 								className='text-4xl lg:text-4xl font-bold mb-6 lg:mb-0'
