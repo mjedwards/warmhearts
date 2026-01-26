@@ -3,6 +3,8 @@ import {eventImagesType} from './eventImagesType'
 import {teamMemberType} from './teamMemberType'
 import {sponsorType} from './sponsorType'
 import {galleryImageType} from './galleryImageType'
+import {articleType} from './articleType'
+import {externalArticleType} from './externalArticleType'
 
 export const schemaTypes = [
   eventType,
@@ -10,4 +12,6 @@ export const schemaTypes = [
   teamMemberType,
   sponsorType,
   galleryImageType,
+  articleType,
+  externalArticleType,
 ]
