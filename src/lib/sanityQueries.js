@@ -115,3 +115,34 @@ export async function fetchCarouselImages() {
   const images = await client.fetch(query);
   return images;
 }
+
+/**
+ * Fetch all internal articles
+ * @returns {Promise<Array>} Array of article objects
+ */
+export async function fetchArticles() {
+  const query = `*[_type == "article"] | order(featured desc, publishDate desc)`;
+  const articles = await client.fetch(query);
+  return articles;
+}
+
+/**
+ * Fetch a single article by slug
+ * @param {string} slug - Article slug
+ * @returns {Promise<Object>} Article object
+ */
+export async function fetchArticleBySlug(slug) {
+  const query = '*[_type == "article" && slug.current == $slug][0]';
+  const article = await client.fetch(query, {slug});
+  return article;
+}
+
+/**
+ * Fetch all external articles
+ * @returns {Promise<Array>} Array of external article objects
+ */
+export async function fetchExternalArticles() {
+  const query = '*[_type == "externalArticle"] | order(publishDate desc)';
+  const articles = await client.fetch(query);
+  return articles;
+}

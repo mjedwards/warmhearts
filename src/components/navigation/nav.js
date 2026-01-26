@@ -39,6 +39,11 @@ function Nav() {
 										Events
 									</NavLink>
 									<NavLink
+										to='/articles'
+										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
+										Articles
+									</NavLink>
+									<NavLink
 										to='/contact'
 										className='text-white hover:text-[#EC523D] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200'>
 										Contact

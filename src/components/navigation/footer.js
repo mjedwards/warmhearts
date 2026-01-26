@@ -62,6 +62,16 @@ export default function Footer() {
 									</NavLink>
 								</li>
 								<li>
+									<NavLink to='/articles' className='hover:text-white transition-colors'>
+										Articles
+									</NavLink>
+								</li>
+								<li>
+									<NavLink to='/articles/external' className='hover:text-white transition-colors'>
+										In the News
+									</NavLink>
+								</li>
+								<li>
 									<NavLink to='/contact' className='hover:text-white transition-colors'>
 										Contact
 									</NavLink>

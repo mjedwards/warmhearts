@@ -38,6 +38,11 @@ function MobileNav({ isOpen }) {
 							Events
 						</NavLink>
 						<NavLink
+							to='/articles'
+							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
+							Articles
+						</NavLink>
+						<NavLink
 							to='/contact'
 							className='text-white hover:text-[#EC523D] block px-3 py-2 rounded-md text-base font-medium'>
 							Contact

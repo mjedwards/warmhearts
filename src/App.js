@@ -11,6 +11,9 @@ import EventsPage from "./pages/events";
 import ContactPage from "./pages/contact";
 import CommunityPage from "./pages/community";
 import GalleryPage from "./pages/gallery";
+import ArticlesPage from "./pages/articles";
+import ArticlePage from "./pages/article";
+import ExternalArticlesPage from "./pages/externalArticles";
 import Footer from "./components/navigation/footer";
 import ThankYou from "./components/forms/thankYou";
 import ScrollToTop from "./components/ScrollToTop";
@@ -30,6 +33,9 @@ function App() {
 					<Route path='/contact' component={ContactPage}></Route>
 					<Route path='/community' component={CommunityPage}></Route>
 					<Route path='/gallery' component={GalleryPage}></Route>
+					<Route path='/articles/external' component={ExternalArticlesPage}></Route>
+					<Route exact path='/articles' component={ArticlesPage}></Route>
+					<Route path='/articles/:slug' component={ArticlePage}></Route>
 					<Route path='/thank-you' component={ThankYou}></Route>
 				</Switch>
 				<Footer />
