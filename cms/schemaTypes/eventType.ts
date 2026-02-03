@@ -56,6 +56,12 @@ export const eventType = defineType({
       description: 'e.g., "6:00 PM - 8:00 PM"',
     }),
     defineField({
+      name: 'eventUrl',
+      title: 'Event URL',
+      type: 'url',
+      description: 'Signup or event info link.',
+    }),
+    defineField({
       name: 'eventClosed',
       title: 'Event Closed',
       type: 'boolean',

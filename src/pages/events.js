@@ -64,6 +64,10 @@ export default function EventsPage() {
 			event.eventDate,
 			event.eventTimeRange
 		);
+		const learnMoreHref = event.eventUrl || `/events/${event.slug.current}`;
+		const isExternalLink = Boolean(
+			event.eventUrl && /^https?:\/\//i.test(event.eventUrl)
+		);
 
 		return (
 			<div
@@ -104,7 +108,9 @@ export default function EventsPage() {
 							<span className='text-gray-500'>Closed</span>
 						) : (
 							<a
-								href={`/events/${event.slug.current}`}
+								href={learnMoreHref}
+								target={isExternalLink ? "_blank" : undefined}
+								rel={isExternalLink ? "noopener noreferrer" : undefined}
 								className='text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200'
 								style={{ backgroundColor: "#ec523d" }}>
 								Learn More
